@@ -22,7 +22,9 @@ jobs:
       run: npm install
 
     - name: Build Docker image
-      run: docker build -t day1:latest .
+      run: docker build -t day1:latest ./react-weather-app
+      working-directory: C:\Users\kachi\Desktop\hi
+
 
     - name: Log in to Docker Hub
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
